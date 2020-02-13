@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: SpringUI
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include=*:
+
+server:
+  port: ${PORT:8080}
+
+
+---
+spring:
+  profiles: local
+
+api:
+  zuuluri: http://localhost:8060/SPRINGAPI
+  eurekauri: http://SPRINGAPI
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: ${spring.cloud.client.hostname}
+
+
+---
+spring:
+  profiles: cloud
+
+api:
+  zuuluri: http://spring-gateway.apps.pas.martin-bw-piv.net/SPRINGAPI
+  eurekauri: http://SPRINGAPI
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://spring-eureka.apps.pas.martin-bw-piv.net/eureka

@@ -1,0 +1,26 @@
+
+---
+applications:
+- name: p-spring-ui
+  hostname: springui.sys.pas.martin-bw-piv.net
+  memory: 1G
+  instances: 1
+  path: ../spring-ui/build/libs/spring-ui.jar
+  buildpacks:
+  - java_buildpack_offline
+  env:
+    spring_profiles_active: dev    
+    eureka_client_serviceUrl_defaultZone: http://spring-eureka.apps.pas.martin-bw-piv.net/eureka
+
+
+---
+applications:
+- name: p-spring-api
+  route: springapi.sys.pas.martin-bw-piv.net
+  memory: 1G
+  instances: 1
+  path: ../spring-api/build/libs/spring-api.jar
+  buildpacks:
+  - java_buildpack_offline
+  env:
+    spring_profiles_active: dev    
