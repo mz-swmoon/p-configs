@@ -34,5 +34,5 @@ spring:
   profiles: cloud
 
 api:
-  zuuluri: http://spring-gateway.apps.pas.martin-bw-piv.net/SPRINGAPI
+  zuuluri: https://gateway-b5b67de5-e7ae-4a2f-a7d5-79467310574d.apps.pas.martin-bw-piv.net/pspring
   eurekauri: http://PSPRINGAPI
