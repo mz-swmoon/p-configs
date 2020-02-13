@@ -35,4 +35,4 @@ spring:
 
 api:
   zuuluri: http://spring-gateway.apps.pas.martin-bw-piv.net/SPRINGAPI
-  eurekauri: http://SPRINGAPI
+  eurekauri: http://PSPRINGAPI

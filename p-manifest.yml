@@ -1,14 +1,14 @@
 
 ---
 applications:
-# - name: p-spring-api
-#   memory: 1G
-#   instances: 1
-#   path: ../p-spring-api/build/libs/p-spring-api.jar
-#   buildpacks:
-#   - java_buildpack_offline
-#   env:
-#     spring.profiles.active: cloud   
+- name: p-spring-api
+  memory: 1G
+  instances: 1
+  path: ../p-spring-api/build/libs/p-spring-api.jar
+  buildpacks:
+  - java_buildpack_offline
+  env:
+    spring.profiles.active: cloud   
 
 
 
@@ -26,14 +26,14 @@ applications:
 #     server.port: 8761
 
 
-- name: p-spring-ui
-  memory: 1G
-  instances: 1
-  path: ../p-spring-ui/build/libs/p-spring-ui.jar
-  buildpacks:
-  - java_buildpack_offline
-  env:
-    spring.profiles.active: cloud    
+# - name: p-spring-ui
+#   memory: 1G
+#   instances: 1
+#   path: ../p-spring-ui/build/libs/p-spring-ui.jar
+#   buildpacks:
+#   - java_buildpack_offline
+#   env:
+#     spring.profiles.active: cloud    
 
 
  
