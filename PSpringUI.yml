@@ -1,6 +1,6 @@
 spring:
   application:
-    name: SpringUI
+    name: PSpringUI
 
 management:
   endpoints:

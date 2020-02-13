@@ -4,7 +4,7 @@ applications:
 - name: p-spring-api
   memory: 1G
   instances: 1
-  path: ../spring-api/build/libs/spring-api.jar
+  path: ../p-spring-api/build/libs/p-spring-api.jar
   buildpacks:
   - java_buildpack_offline
   env:
@@ -12,30 +12,30 @@ applications:
 
 
 
-- name: p-spring-eureka
-  memory: 1G
-  instances: 1
-  path: ../spring-eureka/build/libs/spring-eureka.jar
-  buildpacks:
-  - java_buildpack_offline
-  env:
-    spring.profiles.active: cloud    
-    spring.cloud.config.uri: http://spring-config.apps.pas.martin-bw-piv.net
-    eureka.instance.hostname: ${vcap.application.uris[0]}
-    loggin.level: debug
-    server.port: 8761
+# - name: p-spring-eureka
+#   memory: 1G
+#   instances: 1
+#   path: ../p-spring-eureka/build/libs/p-spring-eureka.jar
+#   buildpacks:
+#   - java_buildpack_offline
+#   env:
+#     spring.profiles.active: cloud    
+#     spring.cloud.config.uri: http://spring-config.apps.pas.martin-bw-piv.net
+#     eureka.instance.hostname: ${vcap.application.uris[0]}
+#     loggin.level: debug
+#     server.port: 8761
 
 
----
-applications:
-- name: p-spring-ui
-  memory: 1G
-  instances: 1
-  path: ../spring-ui/build/libs/spring-ui.jar
-  buildpacks:
-  - java_buildpack_offline
-  env:
-    spring.profiles.active: cloud    
+# ---
+# applications:
+# - name: p-spring-ui
+#   memory: 1G
+#   instances: 1
+#   path: ../p-spring-ui/build/libs/p-spring-ui.jar
+#   buildpacks:
+#   - java_buildpack_offline
+#   env:
+#     spring.profiles.active: cloud    
 
 
  
