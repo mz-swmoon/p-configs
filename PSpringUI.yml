@@ -36,9 +36,3 @@ spring:
 api:
   zuuluri: http://spring-gateway.apps.pas.martin-bw-piv.net/SPRINGAPI
   eurekauri: http://SPRINGAPI
-
-# Discovery Server Access
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://spring-eureka.apps.pas.martin-bw-piv.net/eureka
