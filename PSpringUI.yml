@@ -14,25 +14,8 @@ server:
 
 ---
 spring:
-  profiles: local
-
-api:
-  zuuluri: http://localhost:8060/SPRINGAPI
-  eurekauri: http://SPRINGAPI
-
-# Discovery Server Access
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    hostname: ${spring.cloud.client.hostname}
-
-
----
-spring:
   profiles: cloud
 
-api:
-  zuuluri: https://gateway-b5b67de5-e7ae-4a2f-a7d5-79467310574d.apps.pas.martin-bw-piv.net/pspringapi
-  eurekauri: http://PSPRINGAPI
+uri:
+  gateway: http://gateway-99bc92bf-92f4-4969-9eb9-2577de9ee86b.apps.cf.martin-bw-piv.net/api
+  registry: http://PSPRINGAPI

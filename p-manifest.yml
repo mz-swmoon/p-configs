@@ -1,39 +1,24 @@
 
 ---
 applications:
-- name: p-spring-api
-  memory: 1G
-  instances: 1
-  path: ../p-spring-api/build/libs/p-spring-api.jar
-  buildpacks:
-  - java_buildpack_offline
-  env:
-    spring.profiles.active: cloud   
+#- name: pspring_api
+#  memory: 1024M
+#  instances: 1
+#  buildpack: java_buildpack_offline
+#  path: ./build/libs/p-spring-api.jar
+#  env:
+#    datasource_jdbc-url: jdbc:\\${vcap.services.mysql-info.credentials.uri}
+#    datasource_username: ${vcap.services.mysql-info.credentials.username}
+#    datasource_password: ${vcap.services.mysql-info.credentials.password}
 
 
 
-# - name: p-spring-eureka
-#   memory: 1G
-#   instances: 1
-#   path: ../p-spring-eureka/build/libs/p-spring-eureka.jar
-#   buildpacks:
-#   - java_buildpack_offline
-#   env:
-#     spring.profiles.active: cloud    
-#     spring.cloud.config.uri: http://spring-config.apps.pas.martin-bw-piv.net
-#     eureka.instance.hostname: ${vcap.application.uris[0]}
-#     loggin.level: debug
-#     server.port: 8761
-
-
-# - name: p-spring-ui
-#   memory: 1G
-#   instances: 1
-#   path: ../p-spring-ui/build/libs/p-spring-ui.jar
-#   buildpacks:
-#   - java_buildpack_offline
-#   env:
-#     spring.profiles.active: cloud    
-
+#  - name: pspring_ui
+#    memory: 1024M
+#    instances: 1
+#    buildpack: java_buildpack_offline
+#    path: ./build/libs/p-spring-ui.war
+#    env:
+#      uri.gateway: http://gateway-99bc92bf-92f4-4969-9eb9-2577de9ee86b.apps.cf.martin-bw-piv.net/api
 
  

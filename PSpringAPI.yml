@@ -9,29 +9,13 @@ management:
 server:
   port: ${PORT:8090}
 
-#datasource:
-#  mysql:
-#    driver-class-name: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://115.68.47.165:3306/edu
-#    username: root
-#    password: Paasta@2019
-
-
-# Discovery Server Access
-
----
-spring:
-  profiles: local
-
-eureka:
-  client:
-    healthcheck:
-      enabled: true
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    hostname: ${spring.cloud.client.hostname}
 
 ---
 spring:
   profiles: cloud
+
+datasource:
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  jdbc-url: jdbc:\\${vcap.services.mysql-info.credentials.uri}
+  username: ${vcap.services.mysql-info.credentials.username}
+  password: ${vcap.services.mysql-info.credentials.password}
