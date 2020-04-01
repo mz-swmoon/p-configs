@@ -14,7 +14,7 @@ server:
 
 ---
 spring:
-  profiles: default
+  profiles: cloud
 
 uri:
   registry: http://PSPRINGAPI
