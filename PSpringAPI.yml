@@ -10,6 +10,10 @@ server:
   port: ${PORT:8090}
 
 
+---
+spring:
+  profiles: default
+
 datasource:
   driver-class-name: com.mysql.cj.jdbc.Driver
   jdbc-url: ${vcap.services.mysql-server.credentials.jdbcUrl}
