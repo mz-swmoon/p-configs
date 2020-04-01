@@ -12,10 +12,6 @@ server:
   port: ${PORT:8080}
 
 
----
-spring:
-  profiles: cloud
-
 uri:
-  gateway: http://gateway-99bc92bf-92f4-4969-9eb9-2577de9ee86b.apps.cf.martin-bw-piv.net/api
   registry: http://PSPRINGAPI
+  gateway: https://gateway-3d2b7e96-27e3-4448-80d3-82ced06651da.apps.cf.martin-bw-piv.net/api
