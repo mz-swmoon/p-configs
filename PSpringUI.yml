@@ -18,4 +18,4 @@ spring:
 
 uri:
   registry: http://PSPRINGAPI
-  gateway: https://gateway-3d2b7e96-27e3-4448-80d3-82ced06651da.apps.cf.martin-bw-piv.net/api/
+  gateway: https://gateway-3d2b7e96-27e3-4448-80d3-82ced06651da.apps.cf.martin-bw-piv.net/api/1
