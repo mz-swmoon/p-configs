@@ -12,10 +12,10 @@ server:
 
 ---
 spring:
-  profiles: default
+  profiles: cloud
 
 datasource:
   driver-class-name: com.mysql.cj.jdbc.Driver
   jdbc-url: ${vcap.services.mysql-server.credentials.jdbcUrl}
-  username: ${vcap.services.mysql-info.credentials.username}
-  password: ${vcap.services.mysql-info.credentials.password}
+  username: ${vcap.services.mysql-server.credentials.username}
+  password: ${vcap.services.mysql-server.credentials.password}
