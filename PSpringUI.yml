@@ -18,4 +18,4 @@ spring:
 
 uri:
   registry: http://PSPRINGAPI
-  gateway: https://gateway-5aae6ef4-4a8b-4e7b-b1be-c2b29e291e21.apps.tanzu.mzdemo.net/api1
+  gateway: https://gateway-5aae6ef4-4a8b-4e7b-b1be-c2b29e291e21.apps.tanzu.mzdemo.net/api
